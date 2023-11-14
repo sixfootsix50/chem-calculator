@@ -14,6 +14,8 @@ public class ChemCalc extends javax.swing.JFrame {
      */
     public ChemCalc() {
         initComponents();
+        allClear();
+        updateDisplay();
     }
 
     /**
@@ -52,14 +54,19 @@ public class ChemCalc extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        showOnTop = new javax.swing.JCheckBoxMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        Display.setEditable(false);
+        Display.setBackground(new java.awt.Color(204, 204, 255));
         Display.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
         Display.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         Display.setMargin(new java.awt.Insets(15, 6, 15, 6));
         getContentPane().add(Display, java.awt.BorderLayout.PAGE_START);
 
+        buttonTable.setBackground(new java.awt.Color(204, 204, 255));
         buttonTable.setMaximumSize(new java.awt.Dimension(1000, 225));
         buttonTable.setMinimumSize(new java.awt.Dimension(1000, 225));
         buttonTable.setPreferredSize(new java.awt.Dimension(1000, 225));
@@ -73,7 +80,7 @@ public class ChemCalc extends javax.swing.JFrame {
         jButton1.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                calcButtonPressed(evt);
             }
         });
         buttonTable.add(jButton1, new java.awt.GridBagConstraints());
@@ -91,6 +98,11 @@ public class ChemCalc extends javax.swing.JFrame {
         jButton2.setMaximumSize(new java.awt.Dimension(50, 50));
         jButton2.setMinimumSize(new java.awt.Dimension(50, 50));
         jButton2.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
         buttonTable.add(jButton2, new java.awt.GridBagConstraints());
 
         jButton3.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
@@ -99,6 +111,11 @@ public class ChemCalc extends javax.swing.JFrame {
         jButton3.setMaximumSize(new java.awt.Dimension(50, 50));
         jButton3.setMinimumSize(new java.awt.Dimension(50, 50));
         jButton3.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridy = 1;
         buttonTable.add(jButton3, gridBagConstraints);
@@ -109,6 +126,11 @@ public class ChemCalc extends javax.swing.JFrame {
         jButton4.setMaximumSize(new java.awt.Dimension(50, 50));
         jButton4.setMinimumSize(new java.awt.Dimension(50, 50));
         jButton4.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridy = 1;
         buttonTable.add(jButton4, gridBagConstraints);
@@ -128,6 +150,11 @@ public class ChemCalc extends javax.swing.JFrame {
         jButton5.setMaximumSize(new java.awt.Dimension(50, 50));
         jButton5.setMinimumSize(new java.awt.Dimension(50, 50));
         jButton5.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridy = 1;
         buttonTable.add(jButton5, gridBagConstraints);
@@ -138,6 +165,11 @@ public class ChemCalc extends javax.swing.JFrame {
         jButton6.setMaximumSize(new java.awt.Dimension(50, 50));
         jButton6.setMinimumSize(new java.awt.Dimension(50, 50));
         jButton6.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridy = 1;
         buttonTable.add(jButton6, gridBagConstraints);
@@ -148,6 +180,11 @@ public class ChemCalc extends javax.swing.JFrame {
         jButton7.setMaximumSize(new java.awt.Dimension(50, 50));
         jButton7.setMinimumSize(new java.awt.Dimension(50, 50));
         jButton7.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridy = 1;
         buttonTable.add(jButton7, gridBagConstraints);
@@ -158,6 +195,11 @@ public class ChemCalc extends javax.swing.JFrame {
         jButton8.setMaximumSize(new java.awt.Dimension(50, 50));
         jButton8.setMinimumSize(new java.awt.Dimension(50, 50));
         jButton8.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridy = 1;
         buttonTable.add(jButton8, gridBagConstraints);
@@ -170,7 +212,7 @@ public class ChemCalc extends javax.swing.JFrame {
         jButton9.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton9ActionPerformed(evt);
+                calcButtonPressed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -185,7 +227,7 @@ public class ChemCalc extends javax.swing.JFrame {
         jButton10.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                calcButtonPressed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -200,7 +242,7 @@ public class ChemCalc extends javax.swing.JFrame {
         jButton11.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                calcButtonPressed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -215,7 +257,7 @@ public class ChemCalc extends javax.swing.JFrame {
         jButton12.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
+                calcButtonPressed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -237,6 +279,11 @@ public class ChemCalc extends javax.swing.JFrame {
         jButton13.setMaximumSize(new java.awt.Dimension(50, 50));
         jButton13.setMinimumSize(new java.awt.Dimension(50, 50));
         jButton13.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridy = 2;
         buttonTable.add(jButton13, gridBagConstraints);
@@ -249,7 +296,7 @@ public class ChemCalc extends javax.swing.JFrame {
         jButton14.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
+                calcButtonPressed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -262,6 +309,11 @@ public class ChemCalc extends javax.swing.JFrame {
         jButton15.setMaximumSize(new java.awt.Dimension(50, 50));
         jButton15.setMinimumSize(new java.awt.Dimension(50, 50));
         jButton15.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridy = 2;
         buttonTable.add(jButton15, gridBagConstraints);
@@ -272,6 +324,11 @@ public class ChemCalc extends javax.swing.JFrame {
         jButton16.setMaximumSize(new java.awt.Dimension(50, 50));
         jButton16.setMinimumSize(new java.awt.Dimension(50, 50));
         jButton16.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridy = 2;
         buttonTable.add(jButton16, gridBagConstraints);
@@ -282,6 +339,11 @@ public class ChemCalc extends javax.swing.JFrame {
         jButton17.setMaximumSize(new java.awt.Dimension(50, 50));
         jButton17.setMinimumSize(new java.awt.Dimension(50, 50));
         jButton17.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridy = 2;
         buttonTable.add(jButton17, gridBagConstraints);
@@ -294,7 +356,7 @@ public class ChemCalc extends javax.swing.JFrame {
         jButton18.setPreferredSize(new java.awt.Dimension(50, 50));
         jButton18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton18ActionPerformed(evt);
+                calcButtonPressed(evt);
             }
         });
         gridBagConstraints = new java.awt.GridBagConstraints();
@@ -304,54 +366,58 @@ public class ChemCalc extends javax.swing.JFrame {
         getContentPane().add(buttonTable, java.awt.BorderLayout.CENTER);
 
         jMenu1.setText("File");
+        jMenu1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         jMenuItem1.setText("Quit");
+        jMenuItem1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                quitActionPerformed(evt);
             }
         });
         jMenu1.add(jMenuItem1);
 
         jMenuBar1.add(jMenu1);
 
+        jMenu2.setText("Options");
+        jMenu2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        showOnTop.setText("Show on top");
+        showOnTop.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        showOnTop.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                toggleAlwaysShow(evt);
+            }
+        });
+        jMenu2.add(showOnTop);
+
+        jMenuBar1.add(jMenu2);
+
         setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void calcButtonPressed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calcButtonPressed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+        onButtonPressed((javax.swing.JButton)evt.getSource());
+    }//GEN-LAST:event_calcButtonPressed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void quitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quitActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_quitActionPerformed
 
-    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+    private void toggleAlwaysShow(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toggleAlwaysShow
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton9ActionPerformed
-
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton10ActionPerformed
-
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton11ActionPerformed
-
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton12ActionPerformed
-
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton14ActionPerformed
-
-    private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton18ActionPerformed
-
+        if(showOnTop.isSelected()){
+            setAlwaysOnTop(true);
+        }
+        else{
+            setAlwaysOnTop(false);
+        }
+    }//GEN-LAST:event_toggleAlwaysShow
+    
     /**
      * @param args the command line arguments
      */
@@ -412,7 +478,41 @@ public class ChemCalc extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JCheckBoxMenuItem showOnTop;
     // End of variables declaration//GEN-END:variables
+
+    private String disp;
+    
+    private void handlePress(String item){
+        if (item.equals("clear")){
+            //TODO: clear display
+        }
+        else if(item.equals("back")){
+            //TODO: Go back a character
+        }
+        else{
+            disp = disp + item;
+        }
+    }
+    
+    private void allClear(){
+        disp = "";
+    }
+    
+    private void updateDisplay(){
+        if (disp.length() > 0){
+            Display.setText(disp);
+        }
+    }
+    
+    private void onButtonPressed(javax.swing.JButton button){
+        //System.out.println(button.getText());
+        //System.out.println(disp);
+        handlePress(button.getText());
+        updateDisplay();
+    }
+
 }
