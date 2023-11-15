@@ -51,6 +51,25 @@ public class ChemCalc extends javax.swing.JFrame {
         jButton16 = new javax.swing.JButton();
         jButton17 = new javax.swing.JButton();
         jButton18 = new javax.swing.JButton();
+        jButton19 = new javax.swing.JButton();
+        jButton20 = new javax.swing.JButton();
+        jButton21 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jButton22 = new javax.swing.JButton();
+        jButton23 = new javax.swing.JButton();
+        jButton24 = new javax.swing.JButton();
+        jButton25 = new javax.swing.JButton();
+        jButton26 = new javax.swing.JButton();
+        jButton27 = new javax.swing.JButton();
+        jButton28 = new javax.swing.JButton();
+        jButton29 = new javax.swing.JButton();
+        jButton30 = new javax.swing.JButton();
+        jButton31 = new javax.swing.JButton();
+        jButton32 = new javax.swing.JButton();
+        jButton33 = new javax.swing.JButton();
+        jButton34 = new javax.swing.JButton();
+        jButton35 = new javax.swing.JButton();
+        jButton36 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -59,7 +78,6 @@ public class ChemCalc extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Display.setEditable(false);
         Display.setBackground(new java.awt.Color(204, 204, 255));
         Display.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
         Display.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -85,11 +103,11 @@ public class ChemCalc extends javax.swing.JFrame {
         });
         buttonTable.add(jButton1, new java.awt.GridBagConstraints());
 
-        jLabel1.setMaximumSize(new java.awt.Dimension(800, 50));
-        jLabel1.setMinimumSize(new java.awt.Dimension(800, 50));
-        jLabel1.setPreferredSize(new java.awt.Dimension(800, 50));
+        jLabel1.setMaximumSize(new java.awt.Dimension(825, 50));
+        jLabel1.setMinimumSize(new java.awt.Dimension(825, 50));
+        jLabel1.setPreferredSize(new java.awt.Dimension(825, 50));
         gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridwidth = 16;
+        gridBagConstraints.gridwidth = 17;
         buttonTable.add(jLabel1, gridBagConstraints);
 
         jButton2.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
@@ -135,13 +153,13 @@ public class ChemCalc extends javax.swing.JFrame {
         gridBagConstraints.gridy = 1;
         buttonTable.add(jButton4, gridBagConstraints);
 
-        jLabel2.setMaximumSize(new java.awt.Dimension(500, 50));
-        jLabel2.setMinimumSize(new java.awt.Dimension(500, 50));
-        jLabel2.setPreferredSize(new java.awt.Dimension(500, 50));
+        jLabel2.setMaximumSize(new java.awt.Dimension(525, 50));
+        jLabel2.setMinimumSize(new java.awt.Dimension(525, 50));
+        jLabel2.setPreferredSize(new java.awt.Dimension(525, 50));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 1;
-        gridBagConstraints.gridwidth = 10;
+        gridBagConstraints.gridwidth = 11;
         buttonTable.add(jLabel2, gridBagConstraints);
 
         jButton5.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
@@ -264,13 +282,13 @@ public class ChemCalc extends javax.swing.JFrame {
         gridBagConstraints.gridy = 2;
         buttonTable.add(jButton12, gridBagConstraints);
 
-        jLabel3.setMaximumSize(new java.awt.Dimension(500, 50));
-        jLabel3.setMinimumSize(new java.awt.Dimension(500, 50));
-        jLabel3.setPreferredSize(new java.awt.Dimension(500, 50));
+        jLabel3.setMaximumSize(new java.awt.Dimension(525, 50));
+        jLabel3.setMinimumSize(new java.awt.Dimension(525, 50));
+        jLabel3.setPreferredSize(new java.awt.Dimension(525, 50));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 2;
-        gridBagConstraints.gridwidth = 10;
+        gridBagConstraints.gridwidth = 11;
         buttonTable.add(jLabel3, gridBagConstraints);
 
         jButton13.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
@@ -362,6 +380,283 @@ public class ChemCalc extends javax.swing.JFrame {
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridy = 2;
         buttonTable.add(jButton18, gridBagConstraints);
+
+        jButton19.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
+        jButton19.setText("K");
+        jButton19.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton19.setMaximumSize(new java.awt.Dimension(50, 50));
+        jButton19.setMinimumSize(new java.awt.Dimension(50, 50));
+        jButton19.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton19.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 3;
+        buttonTable.add(jButton19, gridBagConstraints);
+
+        jButton20.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
+        jButton20.setText("Ca");
+        jButton20.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton20.setMaximumSize(new java.awt.Dimension(50, 50));
+        jButton20.setMinimumSize(new java.awt.Dimension(50, 50));
+        jButton20.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton20.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 3;
+        buttonTable.add(jButton20, gridBagConstraints);
+
+        jButton21.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
+        jButton21.setText("Sc");
+        jButton21.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton21.setMaximumSize(new java.awt.Dimension(50, 50));
+        jButton21.setMinimumSize(new java.awt.Dimension(50, 50));
+        jButton21.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton21.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 3;
+        buttonTable.add(jButton21, gridBagConstraints);
+
+        jLabel4.setMaximumSize(new java.awt.Dimension(25, 50));
+        jLabel4.setMinimumSize(new java.awt.Dimension(25, 50));
+        jLabel4.setPreferredSize(new java.awt.Dimension(25, 50));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 3;
+        buttonTable.add(jLabel4, gridBagConstraints);
+
+        jButton22.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
+        jButton22.setText("Ti");
+        jButton22.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton22.setMaximumSize(new java.awt.Dimension(50, 50));
+        jButton22.setMinimumSize(new java.awt.Dimension(50, 50));
+        jButton22.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton22.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 3;
+        buttonTable.add(jButton22, gridBagConstraints);
+
+        jButton23.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
+        jButton23.setText("V");
+        jButton23.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton23.setMaximumSize(new java.awt.Dimension(50, 50));
+        jButton23.setMinimumSize(new java.awt.Dimension(50, 50));
+        jButton23.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton23.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 3;
+        buttonTable.add(jButton23, gridBagConstraints);
+
+        jButton24.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
+        jButton24.setText("Cr");
+        jButton24.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton24.setMaximumSize(new java.awt.Dimension(50, 50));
+        jButton24.setMinimumSize(new java.awt.Dimension(50, 50));
+        jButton24.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton24.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 3;
+        buttonTable.add(jButton24, gridBagConstraints);
+
+        jButton25.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
+        jButton25.setText("Mn");
+        jButton25.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton25.setMaximumSize(new java.awt.Dimension(50, 50));
+        jButton25.setMinimumSize(new java.awt.Dimension(50, 50));
+        jButton25.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton25.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 3;
+        buttonTable.add(jButton25, gridBagConstraints);
+
+        jButton26.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
+        jButton26.setText("Fe");
+        jButton26.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton26.setMaximumSize(new java.awt.Dimension(50, 50));
+        jButton26.setMinimumSize(new java.awt.Dimension(50, 50));
+        jButton26.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton26.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 3;
+        buttonTable.add(jButton26, gridBagConstraints);
+
+        jButton27.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
+        jButton27.setText("Co");
+        jButton27.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton27.setMaximumSize(new java.awt.Dimension(50, 50));
+        jButton27.setMinimumSize(new java.awt.Dimension(50, 50));
+        jButton27.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton27.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 3;
+        buttonTable.add(jButton27, gridBagConstraints);
+
+        jButton28.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
+        jButton28.setText("Ni");
+        jButton28.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton28.setMaximumSize(new java.awt.Dimension(50, 50));
+        jButton28.setMinimumSize(new java.awt.Dimension(50, 50));
+        jButton28.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton28.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 3;
+        buttonTable.add(jButton28, gridBagConstraints);
+
+        jButton29.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
+        jButton29.setText("Cu");
+        jButton29.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton29.setMaximumSize(new java.awt.Dimension(50, 50));
+        jButton29.setMinimumSize(new java.awt.Dimension(50, 50));
+        jButton29.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton29.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 3;
+        buttonTable.add(jButton29, gridBagConstraints);
+
+        jButton30.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
+        jButton30.setText("Zn");
+        jButton30.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton30.setMaximumSize(new java.awt.Dimension(50, 50));
+        jButton30.setMinimumSize(new java.awt.Dimension(50, 50));
+        jButton30.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton30.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 3;
+        buttonTable.add(jButton30, gridBagConstraints);
+
+        jButton31.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
+        jButton31.setText("Ga");
+        jButton31.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton31.setMaximumSize(new java.awt.Dimension(50, 50));
+        jButton31.setMinimumSize(new java.awt.Dimension(50, 50));
+        jButton31.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton31.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 3;
+        buttonTable.add(jButton31, gridBagConstraints);
+
+        jButton32.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
+        jButton32.setText("Ge");
+        jButton32.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton32.setMaximumSize(new java.awt.Dimension(50, 50));
+        jButton32.setMinimumSize(new java.awt.Dimension(50, 50));
+        jButton32.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton32.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 3;
+        buttonTable.add(jButton32, gridBagConstraints);
+
+        jButton33.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
+        jButton33.setText("As");
+        jButton33.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton33.setMaximumSize(new java.awt.Dimension(50, 50));
+        jButton33.setMinimumSize(new java.awt.Dimension(50, 50));
+        jButton33.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton33.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 3;
+        buttonTable.add(jButton33, gridBagConstraints);
+
+        jButton34.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
+        jButton34.setText("Se");
+        jButton34.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton34.setMaximumSize(new java.awt.Dimension(50, 50));
+        jButton34.setMinimumSize(new java.awt.Dimension(50, 50));
+        jButton34.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton34.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 3;
+        buttonTable.add(jButton34, gridBagConstraints);
+
+        jButton35.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
+        jButton35.setText("Br");
+        jButton35.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton35.setMaximumSize(new java.awt.Dimension(50, 50));
+        jButton35.setMinimumSize(new java.awt.Dimension(50, 50));
+        jButton35.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton35.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 3;
+        buttonTable.add(jButton35, gridBagConstraints);
+
+        jButton36.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
+        jButton36.setText("Kr");
+        jButton36.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton36.setMaximumSize(new java.awt.Dimension(50, 50));
+        jButton36.setMinimumSize(new java.awt.Dimension(50, 50));
+        jButton36.setPreferredSize(new java.awt.Dimension(50, 50));
+        jButton36.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 3;
+        buttonTable.add(jButton36, gridBagConstraints);
 
         getContentPane().add(buttonTable, java.awt.BorderLayout.CENTER);
 
@@ -466,8 +761,26 @@ public class ChemCalc extends javax.swing.JFrame {
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
+    private javax.swing.JButton jButton19;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton20;
+    private javax.swing.JButton jButton21;
+    private javax.swing.JButton jButton22;
+    private javax.swing.JButton jButton23;
+    private javax.swing.JButton jButton24;
+    private javax.swing.JButton jButton25;
+    private javax.swing.JButton jButton26;
+    private javax.swing.JButton jButton27;
+    private javax.swing.JButton jButton28;
+    private javax.swing.JButton jButton29;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton30;
+    private javax.swing.JButton jButton31;
+    private javax.swing.JButton jButton32;
+    private javax.swing.JButton jButton33;
+    private javax.swing.JButton jButton34;
+    private javax.swing.JButton jButton35;
+    private javax.swing.JButton jButton36;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
@@ -477,6 +790,7 @@ public class ChemCalc extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
@@ -487,16 +801,15 @@ public class ChemCalc extends javax.swing.JFrame {
     private String disp;
     
     private void handlePress(String item){
-        if (item.equals("clear")){
-            //TODO: clear display
+        switch (item) {
+            case "clear" -> //TODO: clear display
+                allClear();
+            case "back" -> {
+            }
+            default -> disp = disp + item;
         }
-        else if(item.equals("back")){
-            //TODO: Go back a character
-        }
-        else{
-            disp = disp + item;
-        }
-    }
+        //TODO: Go back a character
+            }
     
     private void allClear(){
         disp = "";
