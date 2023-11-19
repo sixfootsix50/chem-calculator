@@ -806,13 +806,11 @@ public class ChemCalc extends javax.swing.JFrame {
             allClear();
         }
         else if (item.equals("back")){
-            backspace(); //TODO: Go back a character
+            backspace();
         }
         else{
             disp = disp + item;
-            //System.out.println(inputHandler.atomicMass(ElementHolder.stringToElement(inputHandler.splitInput(disp))));
         }
-        
     }
     
     private void allClear(){
@@ -821,32 +819,35 @@ public class ChemCalc extends javax.swing.JFrame {
     
     private void backspace(){
         String[] oldText = inputHandler.splitInput(disp);
-        System.out.println(oldText.length);
-        String newText = "";
         if (oldText.length == 1){
             allClear();
-            return;
         }
-        for (int i = 0; i < oldText.length-1; i++){
-            newText = newText + oldText[i];
+        else{
+            String newText = "";
+            for (int i = 0; i < oldText.length-1; i++){
+                newText = newText + oldText[i];
+            }
+            disp = newText;
         }
-        disp = newText;
     }
     
     private void updateDisplay(){
         if (disp.length() > 0){
             Display.setText(disp);
         }
-        //else  ()
+        else{
+            Display.setText("");
+        }
     }
     
     private void onButtonPressed(javax.swing.JButton button){
         //System.out.println(button.getText());
         //System.out.println(disp);
         handlePress(button.getText());
+        //System.out.println(disp);
         updateDisplay();
         //inputHandler.splitInput(disp);
-        
+        System.out.println(inputHandler.atomicMass(ElementHolder.stringToElement(inputHandler.splitInput(disp))));
     }
 
 }
