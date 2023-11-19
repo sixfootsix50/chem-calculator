@@ -61,6 +61,7 @@ public class ChemCalc extends javax.swing.JFrame {
         jButton34 = new javax.swing.JButton();
         jButton35 = new javax.swing.JButton();
         jButton36 = new javax.swing.JButton();
+        jButton37 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -649,6 +650,14 @@ public class ChemCalc extends javax.swing.JFrame {
         gridBagConstraints.gridy = 3;
         buttonTable.add(jButton36, gridBagConstraints);
 
+        jButton37.setText("back");
+        jButton37.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
+        buttonTable.add(jButton37, new java.awt.GridBagConstraints());
+
         getContentPane().add(buttonTable, java.awt.BorderLayout.CENTER);
 
         jMenu1.setText("File");
@@ -772,6 +781,7 @@ public class ChemCalc extends javax.swing.JFrame {
     private javax.swing.JButton jButton34;
     private javax.swing.JButton jButton35;
     private javax.swing.JButton jButton36;
+    private javax.swing.JButton jButton37;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
@@ -792,27 +802,42 @@ public class ChemCalc extends javax.swing.JFrame {
     private String disp;
     
     private void handlePress(String item){
-        switch (item) {
-            case "clear": //TODO: clear display
-                allClear();
-                break;
-            case "back": 
-                
-            default: 
-                disp = disp + item;
-                break;
+        if (item.equals("clear")){
+            allClear();
         }
-        //TODO: Go back a character
-            }
+        else if (item.equals("back")){
+            backspace(); //TODO: Go back a character
+        }
+        else{
+            disp = disp + item;
+            //System.out.println(inputHandler.atomicMass(ElementHolder.stringToElement(inputHandler.splitInput(disp))));
+        }
+        
+    }
     
     private void allClear(){
         disp = "";
+    }
+    
+    private void backspace(){
+        String[] oldText = inputHandler.splitInput(disp);
+        System.out.println(oldText.length);
+        String newText = "";
+        if (oldText.length == 1){
+            allClear();
+            return;
+        }
+        for (int i = 0; i < oldText.length-1; i++){
+            newText = newText + oldText[i];
+        }
+        disp = newText;
     }
     
     private void updateDisplay(){
         if (disp.length() > 0){
             Display.setText(disp);
         }
+        //else  ()
     }
     
     private void onButtonPressed(javax.swing.JButton button){
@@ -821,7 +846,7 @@ public class ChemCalc extends javax.swing.JFrame {
         handlePress(button.getText());
         updateDisplay();
         //inputHandler.splitInput(disp);
-        System.out.println(inputHandler.atomicMass(inputHandler.splitInput(disp)));
+        
     }
 
 }
