@@ -29,6 +29,10 @@ public class CalcLogic extends javax.swing.JFrame {
         String disp = "";
         for (String i: input){
             Element temp = ElementHolder.stringToElement(i);
+            if (temp == null){
+                javax.swing.JOptionPane.showMessageDialog(null, "The element " + i + " is not located in the database.", "No Element Values Found", javax.swing.JOptionPane.ERROR_MESSAGE);
+                return;
+            }
             total += (double)temp.getMass();
             disp += i;
         }
