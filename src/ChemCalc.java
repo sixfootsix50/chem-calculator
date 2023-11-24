@@ -61,7 +61,12 @@ public class ChemCalc extends javax.swing.JFrame {
         jButton34 = new javax.swing.JButton();
         jButton35 = new javax.swing.JButton();
         jButton36 = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
         jButton37 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jButton38 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jButton39 = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -650,13 +655,64 @@ public class ChemCalc extends javax.swing.JFrame {
         gridBagConstraints.gridy = 3;
         buttonTable.add(jButton36, gridBagConstraints);
 
-        jButton37.setText("back");
+        jLabel5.setMaximumSize(new java.awt.Dimension(25, 50));
+        jLabel5.setMinimumSize(new java.awt.Dimension(25, 50));
+        jLabel5.setPreferredSize(new java.awt.Dimension(25, 50));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 0;
+        buttonTable.add(jLabel5, gridBagConstraints);
+
+        jButton37.setText("clear");
+        jButton37.setMaximumSize(new java.awt.Dimension(72, 50));
+        jButton37.setMinimumSize(new java.awt.Dimension(72, 50));
+        jButton37.setPreferredSize(new java.awt.Dimension(72, 50));
         jButton37.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 calcButtonPressed(evt);
             }
         });
         buttonTable.add(jButton37, new java.awt.GridBagConstraints());
+
+        jLabel6.setMaximumSize(new java.awt.Dimension(25, 50));
+        jLabel6.setMinimumSize(new java.awt.Dimension(25, 50));
+        jLabel6.setPreferredSize(new java.awt.Dimension(25, 50));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 1;
+        buttonTable.add(jLabel6, gridBagConstraints);
+
+        jButton38.setText("back");
+        jButton38.setMaximumSize(new java.awt.Dimension(72, 50));
+        jButton38.setMinimumSize(new java.awt.Dimension(72, 50));
+        jButton38.setPreferredSize(new java.awt.Dimension(72, 50));
+        jButton38.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 1;
+        buttonTable.add(jButton38, gridBagConstraints);
+
+        jLabel7.setMaximumSize(new java.awt.Dimension(25, 50));
+        jLabel7.setMinimumSize(new java.awt.Dimension(25, 50));
+        jLabel7.setPreferredSize(new java.awt.Dimension(25, 50));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 2;
+        buttonTable.add(jLabel7, gridBagConstraints);
+
+        jButton39.setText("formula");
+        jButton39.setMaximumSize(new java.awt.Dimension(72, 50));
+        jButton39.setMinimumSize(new java.awt.Dimension(72, 50));
+        jButton39.setPreferredSize(new java.awt.Dimension(72, 50));
+        jButton39.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcButtonPressed(evt);
+            }
+        });
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridy = 2;
+        buttonTable.add(jButton39, gridBagConstraints);
+        jButton39.getAccessibleContext().setAccessibleName("formula");
 
         getContentPane().add(buttonTable, java.awt.BorderLayout.CENTER);
 
@@ -782,6 +838,8 @@ public class ChemCalc extends javax.swing.JFrame {
     private javax.swing.JButton jButton35;
     private javax.swing.JButton jButton36;
     private javax.swing.JButton jButton37;
+    private javax.swing.JButton jButton38;
+    private javax.swing.JButton jButton39;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
@@ -792,6 +850,9 @@ public class ChemCalc extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
@@ -807,6 +868,9 @@ public class ChemCalc extends javax.swing.JFrame {
         }
         else if (item.equals("back")){
             backspace();
+        }
+        else if (item.equals("formula")){
+            javax.swing.JOptionPane.showMessageDialog(null, "The mass of "+ disp + " is " + CalcLogic.atomicMass(ElementHolder.stringToElement(inputHandler.splitInput(disp))), "Formula Mass", javax.swing.JOptionPane.INFORMATION_MESSAGE);
         }
         else{
             disp = disp + item;
@@ -841,13 +905,8 @@ public class ChemCalc extends javax.swing.JFrame {
     }
     
     private void onButtonPressed(javax.swing.JButton button){
-        //System.out.println(button.getText());
-        //System.out.println(disp);
         handlePress(button.getText());
-        //System.out.println(disp);
         updateDisplay();
-        //inputHandler.splitInput(disp);
-        System.out.println(inputHandler.atomicMass(ElementHolder.stringToElement(inputHandler.splitInput(disp))));
+        //System.out.println(CalcLogic.atomicMass(ElementHolder.stringToElement(inputHandler.splitInput(disp))));
     }
-
 }
