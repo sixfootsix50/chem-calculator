@@ -82,9 +82,9 @@ public class ChemCalc extends javax.swing.JFrame {
         getContentPane().add(Display, java.awt.BorderLayout.PAGE_START);
 
         buttonTable.setBackground(new java.awt.Color(204, 204, 255));
-        buttonTable.setMaximumSize(new java.awt.Dimension(1000, 225));
-        buttonTable.setMinimumSize(new java.awt.Dimension(1000, 225));
-        buttonTable.setPreferredSize(new java.awt.Dimension(1000, 225));
+        buttonTable.setMaximumSize(new java.awt.Dimension(1100, 225));
+        buttonTable.setMinimumSize(new java.awt.Dimension(1100, 225));
+        buttonTable.setPreferredSize(new java.awt.Dimension(1100, 225));
         buttonTable.setLayout(new java.awt.GridBagLayout());
 
         jButton1.setFont(new java.awt.Font("Monospaced", 0, 16)); // NOI18N
@@ -870,7 +870,8 @@ public class ChemCalc extends javax.swing.JFrame {
             backspace();
         }
         else if (item.equals("formula")){
-            javax.swing.JOptionPane.showMessageDialog(null, "The mass of "+ disp + " is " + CalcLogic.atomicMass(ElementHolder.stringToElement(inputHandler.splitInput(disp))), "Formula Mass", javax.swing.JOptionPane.INFORMATION_MESSAGE);
+            CalcLogic.atomicMass(inputHandler.splitInput(disp));
+            //javax.swing.JOptionPane.showMessageDialog(null, "The mass of "+ disp + " is " + CalcLogic.atomicMass(ElementHolder.stringToElement(inputHandler.splitInput(disp))), "Formula Mass", javax.swing.JOptionPane.INFORMATION_MESSAGE);
         }
         else{
             disp = disp + item;

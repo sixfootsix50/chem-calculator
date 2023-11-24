@@ -9,11 +9,14 @@ public class ElementHolder {
         elements.put("Li", new Element("Lithium", 6.9410, 1, 3));
     }
     
-    public static Element[] stringToElement(String[] input){
+    public static Element[] stringArrayToElements(String[] input){
         Element[] temp = new Element[input.length];
         for (int i = 0; i < input.length; i++){
             temp[i] = elements.get(input[i]);
         }
         return temp;
+    }
+    public static Element stringToElement(String input){
+        return elements.get(input);
     }
 }
