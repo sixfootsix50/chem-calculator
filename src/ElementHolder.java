@@ -84,7 +84,7 @@ public class ElementHolder {
         elements.put("Pt", new Element("Platinum", 195.08, 10, 78));
         elements.put("Au", new Element("Gold", 196.97, 1, 79));
         elements.put("Hg", new Element("Mercury", 200.59, 2, 80));
-        elements.put("Ti", new Element("Thallium", 204.38, 3, 81));
+        elements.put("Tl", new Element("Thallium", 204.38, 3, 81));
         elements.put("Pb", new Element("Lead", 207.20, 4, 82));
         elements.put("Bi", new Element("Bismuth", 208.98, 5, 83));
         elements.put("Po", new Element("Polonium", 209, 6, 84));
